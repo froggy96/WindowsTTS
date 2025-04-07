@@ -1,8 +1,8 @@
 ﻿using System;
-using System.Windows.Forms;
-using System.Speech.Synthesis;
 using System.Globalization;
 using System.Runtime.InteropServices;
+using System.Speech.Synthesis;
+using System.Windows.Forms;
 
 namespace WindowsTTS
 {
@@ -47,8 +47,13 @@ namespace WindowsTTS
 
         private void btnTest_Click(object sender, EventArgs e)
         {
-            LockWorkStation();
-            //SetScreenSaverRunning();
+
+            // Lock 을 하거나
+            // 화면 보호기를 설정하고, 설정에서 화면보호기 빠져나올 때 로그인 표시를 하거나
+            // ...
+
+            //LockWorkStation();
+            SetScreenSaverRunning();
         }
 
 
@@ -70,5 +75,6 @@ namespace WindowsTTS
         {
             SendMessage(GetDesktopWindow(), WM_SYSCOMMAND, SC_SCREENSAVE, 0);
         }
+
     }
 }
