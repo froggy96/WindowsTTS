@@ -32,11 +32,12 @@
             this.btnDoIt = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.rbLangEn = new System.Windows.Forms.RadioButton();
             this.rbLangKo = new System.Windows.Forms.RadioButton();
+            this.rbLangEn = new System.Windows.Forms.RadioButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rbGenFemale = new System.Windows.Forms.RadioButton();
             this.rbGenMale = new System.Windows.Forms.RadioButton();
+            this.btnTest = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -87,16 +88,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Language";
             // 
-            // groupBox2
+            // rbLangKo
             // 
-            this.groupBox2.Controls.Add(this.rbGenFemale);
-            this.groupBox2.Controls.Add(this.rbGenMale);
-            this.groupBox2.Location = new System.Drawing.Point(275, 375);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(308, 103);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Gender";
+            this.rbLangKo.AutoSize = true;
+            this.rbLangKo.Location = new System.Drawing.Point(165, 45);
+            this.rbLangKo.Name = "rbLangKo";
+            this.rbLangKo.Size = new System.Drawing.Size(63, 16);
+            this.rbLangKo.TabIndex = 1;
+            this.rbLangKo.Text = "Korean";
+            this.rbLangKo.UseVisualStyleBackColor = true;
             // 
             // rbLangEn
             // 
@@ -110,15 +110,16 @@
             this.rbLangEn.Text = "English";
             this.rbLangEn.UseVisualStyleBackColor = true;
             // 
-            // rbLangKo
+            // groupBox2
             // 
-            this.rbLangKo.AutoSize = true;
-            this.rbLangKo.Location = new System.Drawing.Point(165, 45);
-            this.rbLangKo.Name = "rbLangKo";
-            this.rbLangKo.Size = new System.Drawing.Size(63, 16);
-            this.rbLangKo.TabIndex = 1;
-            this.rbLangKo.Text = "Korean";
-            this.rbLangKo.UseVisualStyleBackColor = true;
+            this.groupBox2.Controls.Add(this.rbGenFemale);
+            this.groupBox2.Controls.Add(this.rbGenMale);
+            this.groupBox2.Location = new System.Drawing.Point(275, 375);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(308, 103);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Gender";
             // 
             // rbGenFemale
             // 
@@ -142,12 +143,23 @@
             this.rbGenMale.Text = "Male";
             this.rbGenMale.UseVisualStyleBackColor = true;
             // 
+            // btnTest
+            // 
+            this.btnTest.Location = new System.Drawing.Point(656, 12);
+            this.btnTest.Name = "btnTest";
+            this.btnTest.Size = new System.Drawing.Size(104, 23);
+            this.btnTest.TabIndex = 4;
+            this.btnTest.Text = "Code Test";
+            this.btnTest.UseVisualStyleBackColor = true;
+            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
+            // 
             // Mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(800, 507);
+            this.Controls.Add(this.btnTest);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnClose);
@@ -175,6 +187,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton rbGenFemale;
         private System.Windows.Forms.RadioButton rbGenMale;
+        private System.Windows.Forms.Button btnTest;
     }
 }
 
